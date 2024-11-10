@@ -1,0 +1,8 @@
+# Arquivos de credenciais e tokens
+credentials_new
+credentials
+token.pickle
+token_gmail.pickle
+
+# Opcional: adicionar todos os arquivos JSON de credenciais
+*.json
