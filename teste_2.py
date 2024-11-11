@@ -5,6 +5,9 @@ from dotenv import load_dotenv
 
 # Carregar variáveis de ambiente do arquivo .env
 load_dotenv()
+INTERCOM_TOKEN = os.getenv('INTERCOM_TOKEN')
+
+print(f'Token carregado: {INTERCOM_TOKEN}') 
 
 # Configurações da API
 INTERCOM_TOKEN = os.getenv('INTERCOM_TOKEN')
@@ -22,7 +25,7 @@ def create_export_job(start_date, end_date):
         'Authorization': f'Bearer {INTERCOM_TOKEN}',
         'Content-Type': 'application/json',
         'Intercom-Version': INTERCOM_VERSION
-    }
+}
     data = {
         'created_at_after': start_date,
         'created_at_before': end_date
