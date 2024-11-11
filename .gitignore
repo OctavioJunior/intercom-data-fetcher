@@ -4,5 +4,7 @@ credentials
 token.pickle
 token_gmail.pickle
 
+.env
+
 # Opcional: adicionar todos os arquivos JSON de credenciais
 *.json
