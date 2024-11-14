@@ -1,39 +1,39 @@
-Conversation id,Conversation status,tags,Created at,Last updated at,Reopened,???Closed,Conversation rating,Email,Name,Type,Participated (ID),???Participated (name),???User ID,Assigned to (ID),Closed by (ID),Conversation rating.rating,Conversation rating.remark,Conversation rating.created_at,Conversation rating.contact.type,Conversation rating.contact.id,Conversation rating.contact.external_id,Conversation rating.teammate.type,Conversation rating.teammate.id
-69193964082302,closed,"['*Comercial', '*Clube', 'instagram', 'instagram']",1704158795,1727448344,14,15,,,mariana,lead,752a6c64-d655-4dec-b401-37edd03bb442,,752a6c64-d655-4dec-b401-37edd03bb442,4218710.0,3548139,,,,,,,,
-69193964082291,closed,"['*Comercial', '*Clube', 'instagram']",1704137637,1727103002,1,2,,,Raquel Safar,lead,731ac752-160c-4c35-b565-95fb228a2aa7,,731ac752-160c-4c35-b565-95fb228a2aa7,5160930.0,3548139,,,,,,,,
-69193964082286,closed,"['*Comercial', '*Clube', 'instagram']",1704134957,1726489921,6,7,,,Nutricionista Lucimara Marques/ Comportamento Alimentar 🍽🧠❤,lead,0ca2d8fe-ff3b-4640-bb9e-0ee95b2ac4b8,,0ca2d8fe-ff3b-4640-bb9e-0ee95b2ac4b8,4218710.0,6623655,,,,,,,,
-69193964082304,closed,"['*Comercial', '*Clube', '*Acesso dúvidas', '*Erros de usabilidade', 'instagram', 'instagram']",1704161407,1717502563,7,8,,,Michelle Mota,lead,e9e6bb65-d97b-485b-b774-a0584a21818d,,e9e6bb65-d97b-485b-b774-a0584a21818d,5160930.0,5301483,,,,,,,,
-69193964082298,closed,"['*Comercial', '*Clube', 'instagram']",1704149053,1712154901,2,3,,,Wenyse Rossi,lead,2fa97379-179d-4b63-8c85-975e46390f86,,2fa97379-179d-4b63-8c85-975e46390f86,4241897.0,6427626,,,,,,,,
-69193964082284,closed,[],1704132321,1706813892,1,2,,gcaf03@gmail.com,Geórgia Fernandes,user,188734,gcaf03@gmail.com,188734,1367225.0,5352496,,,1704908040.0,contact,5c3e4600597083eac340d48b,188734,admin,5219433
-69193964082281,closed,"['*Troca de endereço', '*Clube']",1704129854,1706636345,1,2,,soraiaakemi21@gmail.com,Soraia Akemi Santos Ide,user,,soraiaakemi21@gmail.com,,1271968.0,6427626,,,1706636345.0,contact,64b458bdc14a22aed72ef154,,admin,6427626
-69193964082273,closed,[],1704113685,1706029902,0,1,,veronicapsi.xb@gmail.com,Veronica Xavier Barbosa,user,,veronicapsi.xb@gmail.com,,4358522.0,5301483,,,1706029901.0,contact,5f3a8cf49f0b96f1f84cc52a,,admin,5301483
-69193964082295,closed,"['*Acesso dúvidas', '*Clube']",1704143684,1706024690,0,1,,brunxantonini@hotmail.com,Bruno Thomé,user,,brunxantonini@hotmail.com,,3053730.0,5352496,,,1706024689.0,contact,59bf274396cfbc034576675b,,admin,5352496
-69193964082305,closed,"['*Cancelamento', '*Clube', '*Acesso dúvidas']",1704161530,1705947198,0,1,,belsolinas@gmail.com,Isabella Solinas,user,,belsolinas@gmail.com,,1271976.0,4923737,,,1705947198.0,contact,65936c98f5d5c2af053ef609,,admin,4923737
-69193964082306,closed,"['*Acesso dúvidas', '*Clube', '*Comercial', '*Acesso falhas']",1704161859,1705067305,0,1,,ryanmelodossantos@gmail.com,Ryan Melo,lead,f5847f4b-61af-4455-883c-aa6241196dd1,ryanmelodossantos@gmail.com,f5847f4b-61af-4455-883c-aa6241196dd1,3053730.0,6997104,,,1705067304.0,contact,659372431037fbf9200597b5,f5847f4b-61af-4455-883c-aa6241196dd1,admin,6997104
-69193964082296,closed,"['*Troca de endereço', '*Clube', '*Troca', '*Entrega dúvidas']",1704145937,1705007418,0,1,,mirtoa@gmail.com,Mirtô Beatriz Vilanova Gonçalves,user,98664,mirtoa@gmail.com,98664,1271968.0,6427626,,,1705007417.0,contact,5b49801487908b7dddf5aab5,98664,admin,6427626
-69193964082269,closed,"['*Troca de endereço', '*Clube']",1704086057,1705000028,0,1,,carolfsantos@yahoo.com.br,Caroline Ferreira dos Santos,user,,carolfsantos@yahoo.com.br,,1271968.0,6997104,,,1705000027.0,contact,59d6ea148b808cac279a6f77,,admin,6997104
-69193964082293,closed,"['*Cancelamento', '*Clube']",1704139613,1704994984,0,1,,leonardopavaos2@gmail.com,Leonardo Pavão,user,,leonardopavaos2@gmail.com,,3664685.0,4923737,,,1704994983.0,contact,659214d365e7b91ada3a900c,,admin,4923737
-69193964082279,closed,"['*Entrega problemas', '*Clube']",1704128425,1704895352,0,1,,eduardalohahrc@gmail.com,Lohah Rubim da Costa,user,,eduardalohahrc@gmail.com,,1280883.0,5301483,,,1704895351.0,contact,639b8594c2a7c9bd7dcd678e,,admin,5219433
-69193964082276,closed,"['*Comercial', '*Clube']",1704122333,1704796987,1,2,,larissabm@usp.br,Larissa Bernardo Marassatti,lead,d083b9f1-0d64-43c0-b665-9862b023186d,larissabm@usp.br,d083b9f1-0d64-43c0-b665-9862b023186d,1735146.0,5506791,,,1704741372.0,contact,6592d7dd367dba0ea14fa3f6,d083b9f1-0d64-43c0-b665-9862b023186d,admin,5506791
-69193964082282,closed,"['*Comercial', '*Clube']",1704130008,1704741375,0,1,,cristoanastacia@gmail.com,Anastacia Cristi,lead,cbaabad0-84c0-4cd9-afad-7577927ee956,cristoanastacia@gmail.com,cbaabad0-84c0-4cd9-afad-7577927ee956,1735146.0,5506791,,,1704741375.0,contact,6592f5d7367dba09609c5f86,cbaabad0-84c0-4cd9-afad-7577927ee956,admin,5506791
-69193964082138,closed,[],1704151630,1704739554,0,1,,alessandra.machado@taglivros.com.br,Alessandra,admin,,alessandra.machado@taglivros.com.br,,1367225.0,5219433,,,,,,,,
-69193964082287,closed,[],1704136170,1704738977,0,1,,laurab.azanha@gmail.com,Laura Azanha,user,,laurab.azanha@gmail.com,,1852852.0,5301483,,,,,,,,
-69193964082297,closed,"['*Cancelamento', '*Clube']",1704147017,1704723166,0,1,,anasgarbi53@gmail.com,Ana Luiza Gomes Sgarbi,user,,anasgarbi53@gmail.com,,3664685.0,4923737,,,1704723165.0,contact,60abd89dbb297efda3ddc5d2,,admin,4923737
-69193964082294,closed,"['*Comercial', '*Clube', '*Parcerias', 'instagram']",1704140871,1704466876,2,3,,,Jessica Calisto,lead,5c16e8d8-99b7-4971-b0cc-059fa1846820,,5c16e8d8-99b7-4971-b0cc-059fa1846820,5160927.0,3548139,,,,,,,,
-69193964082299,closed,"['*Comercial', '*Clube', 'instagram']",1704153483,1704383589,1,2,,,André Luís Carneiro,lead,e9ca643c-d3a3-4fe0-8cc2-587a5daa4c03,,e9ca643c-d3a3-4fe0-8cc2-587a5daa4c03,5160927.0,5219433,,,,,,,,
-69193964082307,closed,"['*Comercial', '*Clube', 'instagram']",1704162145,1704375899,1,2,,,Mário Almeida,lead,96c7aace-6623-4045-8f96-b8a46ceebeb3,,96c7aace-6623-4045-8f96-b8a46ceebeb3,4241897.0,5301483,,,,,,,,
-69193964082283,closed,"['*Comercial', '*Clube', 'instagram']",1704130324,1704370030,0,1,,,Ana Carolina Bandeira,lead,89cd4d00-5283-4a4e-b51b-b9061233523e,,89cd4d00-5283-4a4e-b51b-b9061233523e,4218710.0,5506791,,,,,,,,
-69193964082308,closed,"['*Comercial', '*Clube', 'instagram']",1704162693,1704307045,0,1,,,Eduardo Castro,lead,d5eae865-0ba7-4a39-908f-5dab3e162479,,d5eae865-0ba7-4a39-908f-5dab3e162479,5160930.0,4597616,,,,,,,,
-69193964082300,closed,"['*Acesso dúvidas', '*Clube', '*Comercial', '*Parcerias', 'instagram']",1704157148,1704306752,0,1,,,Renata Nascimento Ferreira,lead,1c86a963-6697-42c3-9b05-67bbfeec2fd2,,1c86a963-6697-42c3-9b05-67bbfeec2fd2,5160927.0,5219433,,,,,,,,
-69193964082292,closed,"['*Comercial', '*Clube', 'instagram']",1704138769,1704306365,0,1,,,Bruna Lima 🍀,lead,21f138dc-a03d-4db1-88af-74c78fb76d01,,21f138dc-a03d-4db1-88af-74c78fb76d01,5160927.0,5219433,,,,,,,,
-69193964082290,closed,"['*Comercial', '*Clube', 'instagram']",1704136958,1704305984,0,1,,,Ana Cattini,lead,a19441f5-2378-4db3-bcf2-2fbb9fa73a17,,a19441f5-2378-4db3-bcf2-2fbb9fa73a17,5160927.0,5219433,,,,,,,,
-69193964082288,closed,"['*Comercial', '*Clube', 'instagram', 'instagram']",1704136573,1704305904,0,1,,,Twyla Matos,lead,8927c4ae-a33c-44ae-8ed7-902f98840338,,8927c4ae-a33c-44ae-8ed7-902f98840338,5160927.0,5219433,,,,,,,,
-69193964082278,closed,"['*Comercial', '*Clube', 'instagram']",1704128183,1704305835,0,1,,,Juliana Motta,lead,a6b06173-4fa3-43e8-8b70-01163ff126c0,,a6b06173-4fa3-43e8-8b70-01163ff126c0,5160927.0,5219433,,,,,,,,
-69193964082277,closed,"['*Comercial', '*Clube', 'instagram']",1704126484,1704305809,0,1,,,Talita Gandra,lead,e04bfbaa-078e-469c-a748-2bfe9445171d,,e04bfbaa-078e-469c-a748-2bfe9445171d,5160927.0,5219433,,,,,,,,
-69193964082270,closed,"['*Comercial', '*Clube', '*Acesso dúvidas', '*Equipe de experiência', 'instagram']",1704103098,1704304840,0,1,,,MXXWRRSSFJ26,lead,2863a2af-1d8a-4045-9cf4-32a481230d87,,2863a2af-1d8a-4045-9cf4-32a481230d87,5160927.0,5301483,,,,,,,,
-69193964082285,closed,"['*Comercial', '*Clube', 'instagram']",1704133039,1704294670,0,1,,,Alef Divino,lead,6ebc44d9-06e5-46c7-8935-1f5037f1ac44,,6ebc44d9-06e5-46c7-8935-1f5037f1ac44,5160930.0,5301483,,,,,,,,
-69193964082280,closed,"['*Comercial', '*Clube', 'instagram']",1704129500,1704294661,0,1,,,137 Cultural,lead,ad7b5804-10a7-492f-9c5b-43e295f0d379,,ad7b5804-10a7-492f-9c5b-43e295f0d379,5160930.0,5301483,,,,,,,,
-69193964082274,closed,"['*Comercial', '*Clube', 'instagram']",1704119857,1704294638,0,1,,,Gabriela Kothe,lead,5c4855c1-3a2d-4259-9ac5-cdc69704457f,,5c4855c1-3a2d-4259-9ac5-cdc69704457f,5160930.0,5301483,,,,,,,,
-69193964082303,closed,"['*Comercial', '*Clube']",1704160209,1704288772,1,2,,pantoledo@hotmail.com,Paula Toledo,lead,da3c9907-9a3f-415f-8853-4a4268fd328b,pantoledo@hotmail.com,da3c9907-9a3f-415f-8853-4a4268fd328b,1735146.0,5506791,,,1704286620.0,contact,65936bd0a48ef30b1dc241e7,da3c9907-9a3f-415f-8853-4a4268fd328b,admin,5506791
-69193964082275,closed,"['*Reclamação', '*Clube', '*Acesso dúvidas', '*Comercial']",1704121957,1704283750,0,1,,automatico@info.reclameaqui.com.br,Reclame AQUI,lead,da746d4a-1746-4478-a6f9-68d219f08a5d,automatico@info.reclameaqui.com.br,da746d4a-1746-4478-a6f9-68d219f08a5d,,5219433,,,,,,,,
-69193964082271,closed,"['*Comercial', '*Clube']",1704103244,1704283298,0,1,,team@tag-experiencias-literarias.intercom-mail.com,Intercom,lead,9a7dde2e-eb2a-492a-bfcd-cd215eb644d5,team@tag-experiencias-literarias.intercom-mail.com,9a7dde2e-eb2a-492a-bfcd-cd215eb644d5,1735146.0,5506791,,,,,,,,
+Conversation id,Conversation status,tags,Created at,Last updated at,Reopened,Closed by (ID),Email,Name
+69193964082302,closed,"['*Comercial', '*Clube', 'instagram', 'instagram']",1704158795,1727448344,14,3548139,,mariana
+69193964082291,closed,"['*Comercial', '*Clube', 'instagram']",1704137637,1727103002,1,3548139,,Raquel Safar
+69193964082286,closed,"['*Comercial', '*Clube', 'instagram']",1704134957,1726489921,6,6623655,,Nutricionista Lucimara Marques/ Comportamento Alimentar 🍽🧠❤
+69193964082304,closed,"['*Comercial', '*Clube', '*Acesso dúvidas', '*Erros de usabilidade', 'instagram', 'instagram']",1704161407,1717502563,7,5301483,,Michelle Mota
+69193964082298,closed,"['*Comercial', '*Clube', 'instagram']",1704149053,1712154901,2,6427626,,Wenyse Rossi
+69193964082284,closed,[],1704132321,1706813892,1,5352496,gcaf03@gmail.com,Geórgia Fernandes
+69193964082281,closed,"['*Troca de endereço', '*Clube']",1704129854,1706636345,1,6427626,soraiaakemi21@gmail.com,Soraia Akemi Santos Ide
+69193964082273,closed,[],1704113685,1706029902,0,5301483,veronicapsi.xb@gmail.com,Veronica Xavier Barbosa
+69193964082295,closed,"['*Acesso dúvidas', '*Clube']",1704143684,1706024690,0,5352496,brunxantonini@hotmail.com,Bruno Thomé
+69193964082305,closed,"['*Cancelamento', '*Clube', '*Acesso dúvidas']",1704161530,1705947198,0,4923737,belsolinas@gmail.com,Isabella Solinas
+69193964082306,closed,"['*Acesso dúvidas', '*Clube', '*Comercial', '*Acesso falhas']",1704161859,1705067305,0,6997104,ryanmelodossantos@gmail.com,Ryan Melo
+69193964082296,closed,"['*Troca de endereço', '*Clube', '*Troca', '*Entrega dúvidas']",1704145937,1705007418,0,6427626,mirtoa@gmail.com,Mirtô Beatriz Vilanova Gonçalves
+69193964082269,closed,"['*Troca de endereço', '*Clube']",1704086057,1705000028,0,6997104,carolfsantos@yahoo.com.br,Caroline Ferreira dos Santos
+69193964082293,closed,"['*Cancelamento', '*Clube']",1704139613,1704994984,0,4923737,leonardopavaos2@gmail.com,Leonardo Pavão
+69193964082279,closed,"['*Entrega problemas', '*Clube']",1704128425,1704895352,0,5301483,eduardalohahrc@gmail.com,Lohah Rubim da Costa
+69193964082276,closed,"['*Comercial', '*Clube']",1704122333,1704796987,1,5506791,larissabm@usp.br,Larissa Bernardo Marassatti
+69193964082282,closed,"['*Comercial', '*Clube']",1704130008,1704741375,0,5506791,cristoanastacia@gmail.com,Anastacia Cristi
+69193964082138,closed,[],1704151630,1704739554,0,5219433,alessandra.machado@taglivros.com.br,Alessandra
+69193964082287,closed,[],1704136170,1704738977,0,5301483,laurab.azanha@gmail.com,Laura Azanha
+69193964082297,closed,"['*Cancelamento', '*Clube']",1704147017,1704723166,0,4923737,anasgarbi53@gmail.com,Ana Luiza Gomes Sgarbi
+69193964082294,closed,"['*Comercial', '*Clube', '*Parcerias', 'instagram']",1704140871,1704466876,2,3548139,,Jessica Calisto
+69193964082299,closed,"['*Comercial', '*Clube', 'instagram']",1704153483,1704383589,1,5219433,,André Luís Carneiro
+69193964082307,closed,"['*Comercial', '*Clube', 'instagram']",1704162145,1704375899,1,5301483,,Mário Almeida
+69193964082283,closed,"['*Comercial', '*Clube', 'instagram']",1704130324,1704370030,0,5506791,,Ana Carolina Bandeira
+69193964082308,closed,"['*Comercial', '*Clube', 'instagram']",1704162693,1704307045,0,4597616,,Eduardo Castro
+69193964082300,closed,"['*Acesso dúvidas', '*Clube', '*Comercial', '*Parcerias', 'instagram']",1704157148,1704306752,0,5219433,,Renata Nascimento Ferreira
+69193964082292,closed,"['*Comercial', '*Clube', 'instagram']",1704138769,1704306365,0,5219433,,Bruna Lima 🍀
+69193964082290,closed,"['*Comercial', '*Clube', 'instagram']",1704136958,1704305984,0,5219433,,Ana Cattini
+69193964082288,closed,"['*Comercial', '*Clube', 'instagram', 'instagram']",1704136573,1704305904,0,5219433,,Twyla Matos
+69193964082278,closed,"['*Comercial', '*Clube', 'instagram']",1704128183,1704305835,0,5219433,,Juliana Motta
+69193964082277,closed,"['*Comercial', '*Clube', 'instagram']",1704126484,1704305809,0,5219433,,Talita Gandra
+69193964082270,closed,"['*Comercial', '*Clube', '*Acesso dúvidas', '*Equipe de experiência', 'instagram']",1704103098,1704304840,0,5301483,,MXXWRRSSFJ26
+69193964082285,closed,"['*Comercial', '*Clube', 'instagram']",1704133039,1704294670,0,5301483,,Alef Divino
+69193964082280,closed,"['*Comercial', '*Clube', 'instagram']",1704129500,1704294661,0,5301483,,137 Cultural
+69193964082274,closed,"['*Comercial', '*Clube', 'instagram']",1704119857,1704294638,0,5301483,,Gabriela Kothe
+69193964082303,closed,"['*Comercial', '*Clube']",1704160209,1704288772,1,5506791,pantoledo@hotmail.com,Paula Toledo
+69193964082275,closed,"['*Reclamação', '*Clube', '*Acesso dúvidas', '*Comercial']",1704121957,1704283750,0,5219433,automatico@info.reclameaqui.com.br,Reclame AQUI
+69193964082271,closed,"['*Comercial', '*Clube']",1704103244,1704283298,0,5506791,team@tag-experiencias-literarias.intercom-mail.com,Intercom

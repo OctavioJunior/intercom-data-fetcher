@@ -34,6 +34,7 @@ def testar_autenticacao():
         logging.info("Iniciando o teste de autenticação...")
         response = requests.get(test_url, headers=headers)
         response.raise_for_status()  # Verifica se houve erro
+        logging.info(f"Token: {INTERCOM_TOKEN}")
         logging.info("Autenticação bem-sucedida!")
     except requests.exceptions.HTTPError as e:
         logging.error(f"Erro de autenticação: {e}")
