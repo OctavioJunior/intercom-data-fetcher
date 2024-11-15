@@ -4,7 +4,7 @@ from datetime import datetime
 from auth import headers
 
 API_URL = "https://api.intercom.io/conversations/search"
-RESULTADOS_POR_PAGINA = 150
+RESULTS_PER_PAGE = 150
 
 
 def date_to_timestamp(date_str):
@@ -35,7 +35,7 @@ def fetch_all_conversations(start_date, end_date):
                 {"field": "created_at", "operator": "<", "value": end_timestamp},
             ],
         },
-        "pagination": {"per_page": RESULTADOS_POR_PAGINA},
+        "pagination": {"per_page": RESULTS_PER_PAGE},
     }
 
     page = 1

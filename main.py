@@ -1,5 +1,5 @@
 import logging
-from auth import testar_autenticacao
+from auth import auth_test
 from api_intercom import fetch_all_conversations
 from data_processing import process_conversations
 from save_file import save_to_csv
@@ -12,7 +12,7 @@ logging.basicConfig(
 if __name__ == "__main__":
     logging.info("Iniciando o processo de busca de conversas no Intercom.")
 
-    if not testar_autenticacao():
+    if not auth_test():
         logging.error("Autenticação falhou. O processo será interrompido.")
     else:
         start_date = "2024-01-01"

@@ -18,7 +18,7 @@ headers = {
 }
 
 
-def testar_autenticacao():
+def auth_test():
     test_url = "https://api.intercom.io/me"
     try:
         logging.info("Iniciando o teste de autenticação...")
