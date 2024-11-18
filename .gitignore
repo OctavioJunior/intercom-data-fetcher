@@ -1,4 +1,4 @@
-# Arquivos de credenciais e tokens
+
 credentials_new
 credentials
 token.pickle
@@ -7,6 +7,5 @@ __pycache__
 backup
 
 .env
-
-# Opcional: adicionar todos os arquivos JSON de credenciais
+*.csv
 *.json
