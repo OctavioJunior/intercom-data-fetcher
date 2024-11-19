@@ -9,7 +9,9 @@ dist
 build
 
 main.spec.py
+script_test.spec
 
+*.txt
 .env
 *.csv
 *.json
