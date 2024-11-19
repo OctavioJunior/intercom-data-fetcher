@@ -32,6 +32,7 @@ if __name__ == "__main__":
         conversations = fetch_all_conversations(start_date, end_date)
         data_processed = enrich_contacts_with_client_data(conversations)
 
-        save_to_csv(data_processed)
+        date_prefix = start_date[:10]
+        save_to_csv(data_processed, file_name_prefix=f"conversations_{date_prefix}")
 
         logging.info("Processo concluído.")

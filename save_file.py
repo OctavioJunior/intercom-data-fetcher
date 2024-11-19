@@ -5,6 +5,7 @@ import os
 
 def save_to_csv(
     conversations,
+    file_name_prefix="",
     file_name="conversations_data.csv",
     json_file_name="conversations_data.json",
 ):
@@ -15,8 +16,10 @@ def save_to_csv(
     logging.info("Preparando dados para o CSV...")
 
     folder_path = r"C:\script_python_automatic"
-
     os.makedirs(folder_path, exist_ok=True)
+
+    file_name = f"{file_name_prefix}_{file_name}"
+    json_file_name = f"{file_name_prefix}_{json_file_name}"
 
     file_path_csv = os.path.join(folder_path, file_name)
     file_path_json = os.path.join(folder_path, json_file_name)
