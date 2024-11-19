@@ -8,6 +8,8 @@ backup
 dist
 build
 
+main.spec.py
+
 .env
 *.csv
 *.json
