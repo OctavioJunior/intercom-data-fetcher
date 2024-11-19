@@ -1,0 +1,56 @@
+2024-11-19 12:40:34,817 - INFO - Iniciando o processo de busca de conversas no Intercom.
+2024-11-19 12:40:34,818 - INFO - Data de início: 2024-11-18T00:00:00
+2024-11-19 12:40:34,820 - INFO - Data de fim: 2024-11-18T23:59:59
+2024-11-19 12:40:34,820 - INFO - Iniciando o teste de autenticação...
+2024-11-19 12:40:34,821 - INFO - Token: dG9rOjQ1NT...
+2024-11-19 12:40:35,429 - INFO - Autenticação bem-sucedida!
+2024-11-19 12:40:35,430 - INFO - Data inicial recebida: 2024-11-18T00:00:00 00:00:00
+2024-11-19 12:40:35,430 - INFO - Data final recebida: 2024-11-18T23:59:59 23:59:59
+2024-11-19 12:41:58,222 - INFO - Iniciando o processo de busca de conversas no Intercom.
+2024-11-19 12:41:58,222 - INFO - Data de início: 2024-11-18T00:00:00
+2024-11-19 12:41:58,222 - INFO - Data de fim: 2024-11-18T23:59:59
+2024-11-19 12:41:58,222 - INFO - Iniciando o teste de autenticação...
+2024-11-19 12:41:58,222 - INFO - Token: dG9rOjQ1NT...
+2024-11-19 12:41:58,881 - INFO - Autenticação bem-sucedida!
+2024-11-19 12:41:58,896 - INFO - Data inicial recebida: 2024-11-18 00:00:00 00:00:00
+2024-11-19 12:41:58,896 - INFO - Data final recebida: 2024-11-18 23:59:59 23:59:59
+2024-11-19 12:44:32,755 - INFO - Iniciando o processo de busca de conversas no Intercom.
+2024-11-19 12:44:32,756 - INFO - Data de início: 2024-11-18T00:00:00
+2024-11-19 12:44:32,756 - INFO - Data de fim: 2024-11-18T23:59:59
+2024-11-19 12:44:32,757 - INFO - Iniciando o teste de autenticação...
+2024-11-19 12:44:32,757 - INFO - Token: dG9rOjQ1NT...
+2024-11-19 12:44:33,332 - INFO - Autenticação bem-sucedida!
+2024-11-19 12:44:33,332 - INFO - Data inicial normalizada: 2024-11-18 00:00:00
+2024-11-19 12:44:33,332 - INFO - Data final normalizada: 2024-11-18 23:59:59
+2024-11-19 12:44:33,332 - INFO - Iniciando requisição para a página 1...
+2024-11-19 12:44:52,909 - INFO - Status da resposta da página 1: 200
+2024-11-19 12:44:54,209 - INFO - Página 1: 150 conversas encontradas.
+2024-11-19 12:44:54,227 - INFO - Iniciando requisição para a página 2...
+2024-11-19 12:45:15,199 - INFO - Status da resposta da página 2: 200
+2024-11-19 12:45:16,076 - INFO - Página 2: 135 conversas encontradas.
+2024-11-19 12:45:16,077 - INFO - Sem mais páginas. Finalizando a busca.
+2024-11-19 12:48:45,716 - INFO - Detalhes dos clientes obtidos com sucesso.
+2024-11-19 12:48:45,716 - INFO - Preparando dados para o CSV...
+2024-11-19 12:48:45,835 - INFO - Arquivo CSV salvo em: C:\intercom_data_auto\conversas_intercom.csv
+2024-11-19 12:48:45,866 - INFO - Arquivo JSON salvo em: C:\intercom_data_auto\conversas_intercom.json
+2024-11-19 12:48:45,866 - INFO - Processo concluído.
+2024-11-19 12:50:22,097 - INFO - Iniciando o processo de busca de conversas no Intercom.
+2024-11-19 12:50:22,097 - INFO - Data de início: 2024-11-18T00:00:00
+2024-11-19 12:50:22,097 - INFO - Data de fim: 2024-11-18T23:59:59
+2024-11-19 12:50:22,097 - INFO - Iniciando o teste de autenticação...
+2024-11-19 12:50:22,097 - INFO - Token: dG9rOjQ1NT...
+2024-11-19 12:50:22,655 - INFO - Autenticação bem-sucedida!
+2024-11-19 12:50:22,655 - INFO - Data inicial normalizada: 2024-11-18 00:00:00
+2024-11-19 12:50:22,655 - INFO - Data final normalizada: 2024-11-18 23:59:59
+2024-11-19 12:50:22,655 - INFO - Iniciando requisição para a página 1...
+2024-11-19 12:50:39,266 - INFO - Status da resposta da página 1: 200
+2024-11-19 12:50:39,282 - INFO - Página 1: 150 conversas encontradas.
+2024-11-19 12:50:39,282 - INFO - Iniciando requisição para a página 2...
+2024-11-19 12:50:52,064 - INFO - Status da resposta da página 2: 200
+2024-11-19 12:50:52,064 - INFO - Página 2: 135 conversas encontradas.
+2024-11-19 12:50:52,064 - INFO - Sem mais páginas. Finalizando a busca.
+2024-11-19 12:54:10,441 - INFO - Detalhes dos clientes obtidos com sucesso.
+2024-11-19 12:54:10,441 - INFO - Preparando dados para o CSV...
+2024-11-19 12:54:10,546 - INFO - Arquivo CSV salvo em: C:\intercom_data_auto\conversas_intercom.csv
+2024-11-19 12:54:10,577 - INFO - Arquivo JSON salvo em: C:\intercom_data_auto\conversas_intercom.json
+2024-11-19 12:54:10,577 - INFO - Processo concluído.

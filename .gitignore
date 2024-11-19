@@ -5,6 +5,8 @@ token.pickle
 token_gmail.pickle
 __pycache__
 backup
+dist
+build
 
 .env
 *.csv
