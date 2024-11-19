@@ -5,8 +5,8 @@ import os
 
 def save_to_csv(
     conversations,
-    file_name="conversas_intercom.csv",
-    json_file_name="conversas_intercom.json",
+    file_name="conversations_data.csv",
+    json_file_name="conversations_data.json",
 ):
     if not conversations:
         logging.warning("Nenhuma conversa encontrada para salvar.")
@@ -14,7 +14,7 @@ def save_to_csv(
 
     logging.info("Preparando dados para o CSV...")
 
-    folder_path = r"C:\intercom_data_auto"
+    folder_path = r"C:\script_python_automatic"
 
     os.makedirs(folder_path, exist_ok=True)
 

@@ -1,12 +1,19 @@
+import os
 import logging
 import requests
 from auth import headers
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_URL_CONTACTS = os.getenv("API_URL_CONTACTS")
 
 
 def fetch_client_details(client_id):
-    client_url = f"https://api.intercom.io/contacts/{client_id}"
+
+    api_url = f"{API_URL_CONTACTS}/{client_id}"
     try:
-        response = requests.get(client_url, headers=headers)
+        response = requests.get(api_url, headers=headers)
         response.raise_for_status()
         client_data = response.json()
         return client_data
@@ -16,6 +23,8 @@ def fetch_client_details(client_id):
 
 
 def enrich_contacts_with_client_data(conversations):
+
+    logging.info(f"Iniciando busca de contatos.")
     for conversation in conversations:
         contacts = conversation.get("contacts", {}).get("contacts", [])
 

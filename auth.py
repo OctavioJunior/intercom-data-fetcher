@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 INTERCOM_TOKEN = os.getenv("INTERCOM_TOKEN")
+API_URL_AUTH = os.getenv("API_URL_AUTH")
 
 if not INTERCOM_TOKEN:
     raise ValueError(
@@ -20,7 +21,7 @@ headers = {
 
 
 def auth_test():
-    test_url = "https://api.intercom.io/me"
+    test_url = f"{API_URL_AUTH}"
     try:
         logging.info("Iniciando o teste de autenticação...")
         logging.info(f"Token: {INTERCOM_TOKEN[:10]}...")
