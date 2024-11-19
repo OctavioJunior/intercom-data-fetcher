@@ -1,25 +1,38 @@
 import logging
+import requests
+from auth import headers
 
 
-def process_conversations(conversations):
-    logging.info(f"Tratando dados do JSON")
+def fetch_client_details(client_id):
+    """
+    Faz uma requisição para obter os detalhes de um cliente pelo ID.
+    """
+    client_url = f"https://api.intercom.io/contacts/{client_id}"
+    try:
+        response = requests.get(client_url, headers=headers)
+        response.raise_for_status()
+        client_data = response.json()
+        return client_data
+    except requests.exceptions.HTTPError as e:
+        logging.error(f"Erro ao buscar os detalhes do cliente {client_id}: {e}")
+        return None
 
-    processed_data = []
+
+def enrich_contacts_with_client_data(conversations):
+
     for conversation in conversations:
-        conversation_info = {
-            "Conversation id": conversation.get("id"),
-            "Conversation status": conversation.get("state"),
-            "tags": [
-                tag.get("name") for tag in conversation.get("tags", {}).get("tags", [])
-            ],
-            "Created at": conversation.get("created_at"),
-            "Last updated at": conversation.get("updated_at"),
-            "Reopened": conversation.get("statistics", {}).get("count_reopens", 0),
-            "Closed by (ID)": conversation.get("statistics", {}).get(
-                "last_closed_by_id"
-            ),
-            "Email": conversation.get("source", {}).get("author", {}).get("email"),
-            "Name": conversation.get("source", {}).get("author", {}).get("name"),
-        }
-        processed_data.append(conversation_info)
-    return processed_data
+        contacts = conversation.get("contacts", {}).get("contacts", [])
+        for contact in contacts:
+            contact_id = contact.get("id")
+            if contact_id:
+                client_details = fetch_client_details(contact_id)
+                if client_details:
+                    contact["data_client"] = client_details
+                else:
+                    contact["data_client"] = {
+                        "error": "Detalhes do cliente não disponíveis"
+                    }
+            else:
+                logging.warning("ID do contato não encontrado.")
+    logging.info(f"Detalhes dos clientes obtidos com sucesso.")
+    return conversations

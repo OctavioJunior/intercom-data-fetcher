@@ -1,6 +1,6 @@
-import os
 import logging
 import pandas as pd
+import os
 
 
 def save_to_csv(conversations, file_name="conversas_intercom.csv"):
@@ -8,7 +8,12 @@ def save_to_csv(conversations, file_name="conversas_intercom.csv"):
         logging.warning("Nenhuma conversa encontrada para salvar.")
         return
 
-    logging.info(f"Convertendo dados para CSV")
+    logging.info("Preparando dados para o CSV...")
+    for conversation in conversations:
+
+        for key, value in conversation.items():
+            if isinstance(value, (dict, list)):
+                conversation[key] = str(value)
 
     df = pd.DataFrame(conversations)
     file_path = os.path.join(os.getcwd(), file_name)

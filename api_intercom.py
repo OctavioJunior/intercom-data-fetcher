@@ -48,7 +48,6 @@ def fetch_all_conversations(start_date, end_date):
             conversations = data.get("conversations", [])
             all_conversations.extend(conversations)
             logging.info(f"Página {page}: {len(conversations)} conversas encontradas.")
-
         except requests.exceptions.HTTPError as e:
             logging.error(f"Erro na requisição na página {page}: {e}")
             break
