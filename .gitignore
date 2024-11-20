@@ -8,8 +8,7 @@ backup
 dist
 build
 
-main.spec.py
-script_test.spec
+intercom_data_fetcher.spec
 
 *.txt
 .env

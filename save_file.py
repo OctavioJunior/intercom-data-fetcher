@@ -15,7 +15,7 @@ def save_to_csv(
 
     logging.info("Preparando dados para o CSV...")
 
-    folder_path = r"C:\script_python_automatic"
+    folder_path = r"C:\intercom_data_fetcher\arquivos"
     os.makedirs(folder_path, exist_ok=True)
 
     file_name = f"{file_name_prefix}_{file_name}"
