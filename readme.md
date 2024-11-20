@@ -1,7 +1,7 @@
 
 # **Intercom Data Fetcher**
 
-Este projeto automatiza o processo de busca de conversas do Intercom, enriquece os dados dos contatos e os salva em arquivos CSV e JSON para análise posterior.
+Este projeto automatiza o processo de busca de conversas de uma api, enriquece os dados dos contatos e os salva em arquivos CSV e JSON para análise posterior.
 
 ## **Sobre o Projeto**
 
@@ -11,11 +11,11 @@ Este projeto foi desenvolvido para ser rodado tanto como um script Python quanto
 
 ## **Funcionalidades**
 
-- **Busca de Conversas**: Busca todas as conversas no Intercom para um intervalo de datas especificado.
+- **Busca de Conversas**: Busca todas as conversas na api da Intercom para um intervalo de datas especificado.
 - **Enriquecimento de Dados**: Recupera detalhes sobre os contatos envolvidos nas conversas.
 - **Exportação**: Salva os dados em formatos CSV e JSON.
-- **Automação**: Possibilidade de agendar o script para rodar automaticamente, com integração ao Agendador de Tarefas do Windows.
-- **Autenticação Segura**: Carrega o token da API de forma segura a partir de um arquivo `.env`.
+- **Automação**: Possibilidade de agendar o script para rodar automaticamente, por exemplo, com integração ao Agendador de Tarefas do Windows.
+- **Autenticação Segura**: Carrega o token da API e url's de forma segura a partir de um arquivo `.env`.
 
 ## **Tecnologias Utilizadas**
 
@@ -31,13 +31,13 @@ Este projeto foi desenvolvido para ser rodado tanto como um script Python quanto
 ### Requisitos
 
 1. Python 3.7 ou superior.
-2. Acesso à API do Intercom (token de autenticação).
+2. Acesso à API da Intercom (token de autenticação e url's).
 
 ### Passos para Instalação
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/intercom-data-fetcher.git
+   git clone https://github.com/OctavioJunior/intercom-data-fetcher.git
    ```
 
 2. Navegue até o diretório do projeto:
@@ -52,11 +52,11 @@ Este projeto foi desenvolvido para ser rodado tanto como um script Python quanto
 
 4. Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
    ```
-   INTERCOM_TOKEN=seu_token_aqui
-   API_URL_CONVERSATION=https://api.intercom.io/conversations/search
-   API_URL_CONTACTS=https://api.intercom.io/contacts
-   API_URL_AUTH=https://api.intercom.io/me
-   RESULTS_PER_PAGE=150
+   INTERCOM_TOKEN=token_para_acesso_a_api
+   API_URL_CONVERSATION=url_para_pegar_as_conversas
+   API_URL_CONTACTS=url_para_buscar_dados_dos_contatos
+   API_URL_AUTH=url_para_verificar_token
+   RESULTS_PER_PAGE=de_20_a_150_registros_por_pagina
    ```
 
 ## **Como Usar**
@@ -83,7 +83,7 @@ Este projeto foi desenvolvido para ser rodado tanto como um script Python quanto
    Para rodar o script diariamente, adicione uma nova tarefa e configure a frequência e o comando de execução:
 
    - **Comando**: `C:\path\to\intercom_data_fetcher.exe` ou `python C:\path\to\main.py`
-   - **Argumentos**: Não são necessários argumentos adicionais.
+   - **Argumentos**: `C:\path\to\.env_file`
 
 ## **Estrutura do Projeto**
 
@@ -105,7 +105,7 @@ intercom-data-fetcher/
 
 Ao rodar o script, você verá o seguinte processo sendo executado:
 
-1. O script buscará as conversas no Intercom para o intervalo de datas de ontem.
+1. O script buscará as conversas na Intercom para o intervalo de datas de ontem.
 2. Ele buscará detalhes de cada contato envolvido nas conversas.
 3. Os dados serão salvos em arquivos `conversations_data_<data>.csv` e `conversations_data_<data>.json`.
 4. Logs serão gerados para indicar o progresso e qualquer erro ocorrido.
@@ -121,5 +121,3 @@ Certifique-se de seguir as convenções de código e adicionar testes, se necess
 Este projeto é licenciado sob a [MIT License](LICENSE).
 
 ---
-
-Esse README fornece uma visão geral clara e completa sobre o funcionamento do projeto, como configurá-lo e usá-lo, além de instruções para contribuir com o projeto. Ele também está estruturado de forma que qualquer pessoa possa rapidamente entender o propósito do projeto e os passos necessários para rodá-lo.
