@@ -4,6 +4,9 @@ from api_intercom import fetch_all_conversations
 from save_file import save_to_csv
 from data_processing import enrich_contacts_with_client_data
 from datetime import datetime, timedelta
+import os
+import sys
+from dotenv import load_dotenv
 
 
 logging.basicConfig(
@@ -11,6 +14,18 @@ logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
 )
+
+
+if getattr(sys, "frozen", False):
+
+    base_path = sys._MEIPASS
+else:
+
+    base_path = os.path.dirname(os.path.abspath(__file__))
+
+dotenv_path = os.path.join(base_path, ".env")
+
+load_dotenv(dotenv_path)
 
 if __name__ == "__main__":
     logging.info("Iniciando o processo de busca de conversas no Intercom.")
