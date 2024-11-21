@@ -7,20 +7,36 @@ from datetime import datetime, timedelta
 import os
 import sys
 from dotenv import load_dotenv
+import platform
 
 
+if platform.system() == "Windows":
+    folder_path = os.path.join("C:", "intercom_data_fetcher", "files")
+else:
+    folder_path = os.path.join(os.getenv("HOME"), "intercom_data_fetcher", "files")
+
+os.makedirs(folder_path, exist_ok=True)
+
+log_path = os.path.join(folder_path, "log.txt")
+
+stdout_handler = logging.StreamHandler(sys.stdout)
+stderr_handler = logging.StreamHandler(sys.stderr)
+file_handler = logging.FileHandler(log_path)
+
+stdout_handler.setLevel(logging.INFO)
+stderr_handler.setLevel(logging.ERROR)
+file_handler.setLevel(logging.INFO)
+
+log_format = "%(asctime)s - %(levelname)s - %(message)s"
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
+    format=log_format,
+    handlers=[stdout_handler, stderr_handler, file_handler],
 )
 
-
 if getattr(sys, "frozen", False):
-
     base_path = sys._MEIPASS
 else:
-
     base_path = os.path.dirname(os.path.abspath(__file__))
 
 dotenv_path = os.path.join(base_path, ".env")

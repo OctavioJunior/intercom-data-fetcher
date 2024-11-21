@@ -1,10 +1,4 @@
-
-credentials_new
-credentials
-token.pickle
-token_gmail.pickle
 __pycache__
-backup
 dist
 build
 

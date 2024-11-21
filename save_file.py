@@ -1,6 +1,7 @@
 import logging
 import pandas as pd
 import os
+import platform
 
 
 def save_to_csv(
@@ -15,7 +16,11 @@ def save_to_csv(
 
     logging.info("Preparando dados para o CSV...")
 
-    folder_path = os.path.join(os.getenv("HOME"), "intercom_data_fetcher", "files")
+    if platform.system() == "Windows":
+        folder_path = os.path.join("C:", "intercom_data_fetcher", "files")
+    else:
+        folder_path = os.path.join(os.getenv("HOME"), "intercom_data_fetcher", "files")
+
     os.makedirs(folder_path, exist_ok=True)
 
     file_name = f"{file_name_prefix}_{file_name}"
