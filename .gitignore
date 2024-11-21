@@ -10,7 +10,7 @@ build
 
 intercom_data_fetcher.spec
 
-*.txt
+*log.txt
 .env
 *.csv
 *.json

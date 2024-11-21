@@ -10,6 +10,8 @@ load_dotenv()
 API_URL_CONVERSATION = os.getenv("API_URL_CONVERSATION")
 RESULTS_PER_PAGE = int(os.getenv("RESULTS_PER_PAGE", 150))
 
+API_URL_CONVERSATION = API_URL_CONVERSATION.strip()
+
 
 def date_to_timestamp(date_str):
     date_obj = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")

@@ -13,6 +13,8 @@ if not INTERCOM_TOKEN:
         "O token INTERCOM_TOKEN não foi encontrado. Verifique seu arquivo .env."
     )
 
+INTERCOM_TOKEN = INTERCOM_TOKEN.strip()
+
 headers = {
     "Authorization": f"Bearer {INTERCOM_TOKEN}",
     "Content-Type": "application/json",
@@ -21,7 +23,7 @@ headers = {
 
 
 def auth_test():
-    test_url = f"{API_URL_AUTH}"
+    test_url = API_URL_AUTH.strip()
     try:
         logging.info("Iniciando o teste de autenticação...")
         logging.info(f"Token: {INTERCOM_TOKEN[:10]}...")

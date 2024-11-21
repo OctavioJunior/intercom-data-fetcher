@@ -8,6 +8,8 @@ load_dotenv()
 
 API_URL_CONTACTS = os.getenv("API_URL_CONTACTS")
 
+API_URL_CONTACTS = API_URL_CONTACTS.strip()
+
 
 def fetch_client_details(client_id):
 
