@@ -7,8 +7,8 @@ import platform
 def save_to_csv(
     conversations,
     file_name_prefix="",
-    file_name="conversations_data.csv",
-    json_file_name="conversations_data.json",
+    file_name="conversations.csv",
+    json_file_name="conversations.json",
 ):
     if not conversations:
         logging.warning("Nenhuma conversa encontrada para salvar.")

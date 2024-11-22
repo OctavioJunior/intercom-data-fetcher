@@ -67,7 +67,7 @@ if __name__ == "__main__":
         date_prefix = start_date[:10]
 
         file_path, file_name = save_to_csv(
-            data_processed, file_name_prefix=f"conversations_{date_prefix}"
+            data_processed, file_name_prefix=f"{date_prefix}"
         )
 
     if file_path and file_name:

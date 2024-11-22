@@ -13,21 +13,18 @@ def upload_to_drive(file_path, file_name):
     SCOPES = ["https://www.googleapis.com/auth/drive.file"]
     creds = None
 
-    # Caminhos relativos para os arquivos de credenciais e token
     base_path = os.path.dirname(__file__)
     credentials_path = os.path.join(base_path, "credentials.json")
     token_path = os.path.join(base_path, "token.pickle")
 
-    # Verificar se os arquivos necessários existem
     if not os.path.exists(credentials_path):
         logging.error(f"Arquivo de credenciais {credentials_path} não encontrado!")
-        return  # Interrompe a execução se o arquivo não for encontrado
+        return
 
     if not os.path.exists(token_path):
         logging.error(f"Arquivo de token {token_path} não encontrado!")
-        return  # Interrompe a execução se o arquivo não for encontrado
+        return
 
-    # Carregar o token se ele existir
     if os.path.exists(token_path):
         with open(token_path, "rb") as token:
             creds = pickle.load(token)
