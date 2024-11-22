@@ -7,6 +7,7 @@ from datetime import datetime, timedelta
 import os
 import sys
 from dotenv import load_dotenv
+from upload_to_drive import upload_to_drive
 import platform
 
 
@@ -64,6 +65,16 @@ if __name__ == "__main__":
         data_processed = enrich_contacts_with_client_data(conversations)
 
         date_prefix = start_date[:10]
-        save_to_csv(data_processed, file_name_prefix=f"conversations_{date_prefix}")
+
+        file_path, file_name = save_to_csv(
+            data_processed, file_name_prefix=f"conversations_{date_prefix}"
+        )
+
+    if file_path and file_name:
+        logging.info(f"Arquivo pronto para o upload: {file_name}")
+
+        upload_to_drive(file_path, file_name)
+    else:
+        logging.error("Erro ao salvar o arquivo. Upload não realizado.")
 
         logging.info("Processo concluído.")

@@ -43,3 +43,5 @@ def save_to_csv(
     # Save to JSON
     df.to_json(file_path_json, orient="records", lines=True)
     logging.info(f"Arquivo JSON salvo em: {file_path_json}")
+
+    return file_path_csv, file_name
