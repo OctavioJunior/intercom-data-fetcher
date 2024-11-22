@@ -1,11 +1,11 @@
 
 # **Intercom Data Fetcher**
 
-Este projeto automatiza o processo de busca de conversas de uma api, enriquece os dados dos contatos e os salva em arquivos CSV e JSON para análise posterior.
+Este projeto automatiza o processo de busca de conversas de uma api, enriquece os dados dos contatos e os salva em arquivos CSV e JSON para subir para o Google Drive.
 
 ## **Sobre o Projeto**
 
-O **Intercom Data Fetcher** é um script Python projetado para facilitar a extração e armazenamento de conversas e dados de clientes a partir da API do Intercom. Ele permite que você busque conversas baseadas em um intervalo de datas, obtenha detalhes dos contatos relacionados a essas conversas e armazene os resultados em arquivos CSV e JSON para análise e relatórios.
+O **Intercom Data Fetcher** é um script Python projetado para facilitar a extração e armazenamento de conversas e dados de clientes a partir da API do Intercom. Ele permite que você busque conversas baseadas em um intervalo de datas, obtenha detalhes dos contatos relacionados a essas conversas e armazene os resultados em arquivos CSV e JSON para fazer upload para o um drive.
 
 Este projeto foi desenvolvido para ser rodado tanto como um script Python quanto como um executável independente, o que facilita a automação e agendamento de tarefas no seu sistema operacional.
 
@@ -15,6 +15,7 @@ Este projeto foi desenvolvido para ser rodado tanto como um script Python quanto
 - **Enriquecimento de Dados**: Recupera detalhes sobre os contatos envolvidos nas conversas.
 - **Exportação**: Salva os dados em formatos CSV e JSON.
 - **Automação**: Possibilidade de agendar o script para rodar automaticamente, por exemplo, com integração ao Agendador de Tarefas do Windows.
+- **Upload dos Arquivos**: Faz o uploaad dos arquivos para o Google Drive.
 - **Autenticação Segura**: Carrega o token da API e url's de forma segura a partir de um arquivo `.env`.
 
 ## **Tecnologias Utilizadas**
@@ -25,6 +26,7 @@ Este projeto foi desenvolvido para ser rodado tanto como um script Python quanto
 - **dotenv** (para carregar variáveis de ambiente)
 - **Pandas** (para manipulação e exportação de dados)
 - **Logging** (para monitoramento e registro de eventos)
+- **Google Drive API** (para upload dos arquivos)
 
 ## **Instalação**
 
@@ -32,6 +34,7 @@ Este projeto foi desenvolvido para ser rodado tanto como um script Python quanto
 
 1. Python 3.7 ou superior.
 2. Acesso à API da Intercom (token de autenticação e url's).
+3. Acesso à API do Google Drive (token de autenticação).
 
 ### Passos para Instalação
 
@@ -96,6 +99,7 @@ intercom-data-fetcher/
 ├── api_intercom.py    # Funções para buscar conversas e contatos na API
 ├── save_file.py       # Funções para salvar os dados em CSV e JSON
 ├── data_processing.py # Funções para processar e enriquecer os dados
+├── upload_to_drive.py # Funções para fazer upload dos arquivos para o Google Drive
 ├── log.txt            # Arquivo de log gerado durante a execução
 ├── requirements.txt   # Lista de dependências do projeto
 └── dist/              # Pasta contendo o executável gerado pelo PyInstaller
@@ -108,7 +112,8 @@ Ao rodar o script, você verá o seguinte processo sendo executado:
 1. O script buscará as conversas na Intercom para o intervalo de datas de ontem.
 2. Ele buscará detalhes de cada contato envolvido nas conversas.
 3. Os dados serão salvos em arquivos `conversations_data_<data>.csv` e `conversations_data_<data>.json`.
-4. Logs serão gerados para indicar o progresso e qualquer erro ocorrido.
+4. Os arquivos serão enviados para o Google Drive.
+5. Logs serão gerados para indicar o progresso e qualquer erro ocorrido.
 
 ## **Contribuindo**
 
