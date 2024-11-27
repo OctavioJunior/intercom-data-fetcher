@@ -4,6 +4,9 @@ import logging
 from datetime import datetime
 from auth import headers
 from dotenv import load_dotenv
+from date_utils import normalize_date_format
+from date_utils import date_to_timestamp
+from date_utils import normalize_date_format
 
 load_dotenv()
 
@@ -11,32 +14,6 @@ API_URL_CONVERSATION = os.getenv("API_URL_CONVERSATION")
 RESULTS_PER_PAGE = int(os.getenv("RESULTS_PER_PAGE", 150))
 
 API_URL_CONVERSATION = API_URL_CONVERSATION.strip()
-
-
-def date_to_timestamp(date_str):
-    date_obj = datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
-    return int(date_obj.timestamp())
-
-
-def adjust_dates(start_date_str, end_date_str):
-    start_date = f"{start_date_str} 00:00:00"
-    end_date = f"{end_date_str} 23:59:59"
-    return start_date, end_date
-
-
-def normalize_date_format(date_str):
-
-    if " " in date_str and date_str.count(":") > 3:
-        date_str = date_str.rsplit(" ", 1)[0]
-
-    date_str = date_str.replace("T", " ")
-
-    try:
-        datetime.strptime(date_str, "%Y-%m-%d %H:%M:%S")
-    except ValueError:
-        raise ValueError(f"Formato inválido detectado após normalização: {date_str}")
-
-    return date_str
 
 
 def fetch_all_conversations(start_date, end_date):

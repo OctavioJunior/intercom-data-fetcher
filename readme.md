@@ -98,11 +98,15 @@ intercom-data-fetcher/
 ├── auth.py            # Funções para autenticação na API do Intercom
 ├── api_intercom.py    # Funções para buscar conversas e contatos na API
 ├── save_file.py       # Funções para salvar os dados em CSV e JSON
-├── data_processing.py # Funções para processar e enriquecer os dados
+├── fetch_clients.py   # Funções para buscar clientes na API
 ├── upload_to_drive.py # Funções para fazer upload dos arquivos para o Google Drive
-├── log.txt            # Arquivo de log gerado durante a execução
 ├── requirements.txt   # Lista de dependências do projeto
-└── dist/              # Pasta contendo o executável gerado pelo PyInstaller
+├── README.md          # Documentação do projeto
+├── logging_config.py  # Configuração do logging
+├── date_utils.py      # Funções para manipulação de datas
+├── credentials.json   # Arquivo de credenciais para autenticação na API do Google Drive
+├── tokenn.pickle      # Arquivo para armazenar o token de autenticação
+├── .gitignore         # Arquivo para ignorar arquivos e diretórios específicos no Git
 ```
 
 ## **Exemplo de Execução**
@@ -111,7 +115,7 @@ Ao rodar o script, você verá o seguinte processo sendo executado:
 
 1. O script buscará as conversas na Intercom para o intervalo de datas de ontem.
 2. Ele buscará detalhes de cada contato envolvido nas conversas.
-3. Os dados serão salvos em arquivos `conversations_data_<data>.csv` e `conversations_data_<data>.json`.
+3. Os dados serão salvos em arquivos `<data>_conversations.csv` e `<data>_conversations.json`.
 4. Os arquivos serão enviados para o Google Drive.
 5. Logs serão gerados para indicar o progresso e qualquer erro ocorrido.
 
