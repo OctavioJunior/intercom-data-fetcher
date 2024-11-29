@@ -1,11 +1,12 @@
+import os
+import json
 import logging
 import pandas as pd
-import os
+from csv_converter import csv_converter
 from logging_config import get_folder_path
 
 
 def prepare_file_paths(file_name_prefix, file_name, json_file_name):
-
     folder_path = get_folder_path()
     os.makedirs(folder_path, exist_ok=True)
 
@@ -15,15 +16,6 @@ def prepare_file_paths(file_name_prefix, file_name, json_file_name):
     return os.path.join(folder_path, file_name), os.path.join(
         folder_path, json_file_name
     )
-
-
-def format_conversations(conversations):
-
-    for conversation in conversations:
-        for key, value in conversation.items():
-            if isinstance(value, (dict, list)):
-                conversation[key] = str(value)
-    return conversations
 
 
 def save_to_csv(
@@ -36,20 +28,21 @@ def save_to_csv(
         logging.warning("Nenhuma conversa encontrada para salvar.")
         return
 
-    logging.info("Preparando dados para o CSV...")
+    logging.info("Preparando dados para salvar...")
 
     file_path_csv, file_path_json = prepare_file_paths(
         file_name_prefix, file_name, json_file_name
     )
 
-    formatted_conversations = format_conversations(conversations)
+    with open(file_path_json, "w", encoding="utf-8") as json_file:
+        json.dump(conversations, json_file, ensure_ascii=False, indent=4)
+    logging.info(f"Arquivo JSON original salvo em: {file_path_json}")
 
-    df = pd.DataFrame(formatted_conversations)
+    expanded_conversations = csv_converter(conversations)
+
+    df = pd.DataFrame(expanded_conversations)
 
     df.to_csv(file_path_csv, index=False)
     logging.info(f"Arquivo CSV salvo em: {file_path_csv}")
-
-    df.to_json(file_path_json, orient="records", lines=True)
-    logging.info(f"Arquivo JSON salvo em: {file_path_json}")
 
     return file_path_csv, file_name

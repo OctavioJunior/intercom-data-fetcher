@@ -1,13 +1,13 @@
 __pycache__
 dist
 build
+intercom_data_fetcher
 
 credentials.json
 token.pickle
 
 intercom_data_fetcher.spec
 
-*log.txt
 .env
 *.csv
 *.json

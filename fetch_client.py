@@ -6,13 +6,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-API_URL_CONTACTS = os.getenv("API_URL_CONTACTS")
-
-API_URL_CONTACTS = API_URL_CONTACTS.strip()
+API_URL_CONTACTS = os.getenv("API_URL_CONTACTS").strip()
 
 
 def fetch_client_details(client_id):
-
     api_url = f"{API_URL_CONTACTS}/{client_id}"
     try:
         response = requests.get(api_url, headers=headers)
@@ -25,27 +22,29 @@ def fetch_client_details(client_id):
 
 
 def enrich_contacts_with_client_data(conversations):
-
-    logging.info(f"Iniciando busca de contatos.")
+    logging.info("Iniciando busca de contatos.")
     for conversation in conversations:
         contacts = conversation.get("contacts", {}).get("contacts", [])
 
-        client_data_list = []
-
-        for contact in contacts:
-            contact_id = contact.get("id")
+        # Verifica se há pelo menos um contato
+        if contacts:
+            contact_id = contacts[0].get("id")
             if contact_id:
                 client_details = fetch_client_details(contact_id)
                 if client_details:
-                    client_data_list.append(client_details)
+                    conversation["contact_info"] = client_details
                 else:
-                    client_data_list.append(
-                        {"error": "Detalhes do cliente não disponíveis"}
-                    )
+                    conversation["contact_info"] = {
+                        "error": "Detalhes do cliente não disponíveis"
+                    }
             else:
-                logging.warning("ID do contato não encontrado.")
+                conversation["contact_info"] = {
+                    "error": "ID do contato não encontrado."
+                }
+        else:
+            conversation["contact_info"] = {
+                "error": "Nenhum contato associado à conversa."
+            }
 
-        conversation["data_client"] = client_data_list
-
-    logging.info(f"Detalhes dos clientes obtidos com sucesso.")
+    logging.info("Detalhes dos clientes obtidos com sucesso.")
     return conversations

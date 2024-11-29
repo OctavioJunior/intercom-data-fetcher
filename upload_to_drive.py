@@ -5,6 +5,11 @@ from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
+from dotenv import load_dotenv
+
+load_dotenv()
+
+ID_DRIVE_FOLDER = os.getenv("ID_DRIVE_FOLDER")
 
 
 def upload_to_drive(file_path, file_name):
@@ -41,7 +46,12 @@ def upload_to_drive(file_path, file_name):
 
     service = build("drive", "v3", credentials=creds)
 
-    file_metadata = {"name": file_name}
+    folder_id = ID_DRIVE_FOLDER
+
+    file_metadata = {
+        "name": file_name,
+        "parents": [folder_id],
+    }
     media = MediaFileUpload(file_path, mimetype="application/vnd.ms-excel")
 
     try:

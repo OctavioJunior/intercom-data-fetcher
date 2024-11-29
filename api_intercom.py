@@ -1,12 +1,9 @@
 import os
 import requests
 import logging
-from datetime import datetime
 from auth import headers
 from dotenv import load_dotenv
-from date_utils import normalize_date_format
-from date_utils import date_to_timestamp
-from date_utils import normalize_date_format
+from date_utils import normalize_date_format, date_to_timestamp, normalize_date_format
 
 load_dotenv()
 

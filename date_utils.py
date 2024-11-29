@@ -29,3 +29,31 @@ def normalize_date_format(date_str):
         raise ValueError(f"Formato inválido detectado após normalização: {date_str}")
 
     return date_str
+
+
+def convert_timestamp(timestamp):
+    if isinstance(timestamp, (int, float)):
+        return datetime.fromtimestamp(timestamp).strftime("%d/%m/%Y")
+    elif isinstance(timestamp, str):
+        try:
+            if timestamp.endswith("Z"):
+                return datetime.strptime(timestamp, "%Y-%m-%dT%H:%M:%SZ").strftime(
+                    "%d/%m/%Y"
+                )
+            else:
+                return datetime.fromisoformat(timestamp).strftime("%d/%m/%Y")
+        except ValueError:
+            return timestamp
+    return timestamp
+
+
+def convert_seconds_to_minutes(seconds):
+    if seconds is None:
+        return None
+    try:
+        minutes = seconds // 60
+        hours = minutes // 60
+        remaining_minutes = minutes % 60
+        return f"{hours:02d}:{remaining_minutes:02d}"
+    except (ValueError, TypeError):
+        return None

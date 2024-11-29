@@ -16,9 +16,9 @@ def main():
 
     logging.info("Iniciando o processo de busca de conversas no Intercom.")
 
-    # start_date, end_date = get_date_range()
-    start_date = "2024-01-01T00:00:00"
-    end_date = "2024-01-01T23:59:59"
+    start_date, end_date = get_date_range()
+    # start_date = "2024-01-01T00:00:00"
+    # end_date = "2024-01-01T23:59:59"
     logging.info(f"Data de início: {start_date}")
     logging.info(f"Data de fim: {end_date}")
 
@@ -28,9 +28,11 @@ def main():
 
     try:
         conversations = fetch_all_conversations(start_date, end_date)
+
         clients_data = enrich_contacts_with_client_data(conversations)
 
         date_prefix = start_date[:10]
+
         file_path, file_name = save_to_csv(
             clients_data, file_name_prefix=f"{date_prefix}"
         )
@@ -40,6 +42,7 @@ def main():
             upload_to_drive(file_path, file_name)
         else:
             logging.error("Erro ao salvar o arquivo. Upload não realizado.")
+
     except Exception as e:
         logging.error(f"Ocorreu um erro durante o processamento: {e}")
 
