@@ -100,6 +100,7 @@ intercom-data-fetcher/
 ├── save_file.py       # Funções para salvar os dados em CSV e JSON
 ├── fetch_clients.py   # Funções para buscar clientes na API
 ├── upload_to_drive.py # Funções para fazer upload dos arquivos para o Google Drive
+├── csv_converter.py   # Funções para converter dados em CSV
 ├── requirements.txt   # Lista de dependências do projeto
 ├── README.md          # Documentação do projeto
 ├── logging_config.py  # Configuração do logging

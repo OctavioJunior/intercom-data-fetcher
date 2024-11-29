@@ -7,7 +7,6 @@ from save_file import save_to_csv
 from fetch_client import enrich_contacts_with_client_data
 from upload_to_drive import upload_to_drive
 import os
-
 from logging_config import setup_logging
 from date_utils import get_date_range
 

@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 ID_DRIVE_FOLDER = os.getenv("ID_DRIVE_FOLDER")
+ID_DRIVE_FOLDER = ID_DRIVE_FOLDER.strip()
 
 
 def upload_to_drive(file_path, file_name):
