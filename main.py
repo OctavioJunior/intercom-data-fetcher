@@ -16,8 +16,8 @@ def main():
     logging.info("Iniciando o processo de busca de conversas no Intercom.")
 
     start_date, end_date = get_date_range()
-    # start_date = "2024-01-01T00:00:00"
-    # end_date = "2024-01-01T23:59:59"
+    # start_date = "2024-01-06T00:00:00"
+    # end_date = "2024-01-06T23:59:59"
     logging.info(f"Data de início: {start_date}")
     logging.info(f"Data de fim: {end_date}")
 
