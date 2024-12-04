@@ -15,7 +15,7 @@ ID_DRIVE_FOLDER = os.getenv("ID_DRIVE_FOLDER").strip()
 
 
 def merge_csv(file_path, existing_csv_path):
-    """Mescla dois arquivos CSV."""
+
     if not isinstance(file_path, str) or not isinstance(existing_csv_path, str):
         logging.error(
             f"Um dos caminhos fornecidos não é válido: file_path={file_path}, existing_csv_path={existing_csv_path}"
@@ -77,10 +77,8 @@ def upload_to_drive(file_path, file_name):
 
     folder_id = ID_DRIVE_FOLDER
 
-    # Caminho temporário para armazenar o arquivo existente
     temp_existing_csv_path = "existing_file.csv"
 
-    # Verificar e remover o arquivo existente
     if os.path.exists(temp_existing_csv_path):
         try:
             os.remove(temp_existing_csv_path)
@@ -88,7 +86,6 @@ def upload_to_drive(file_path, file_name):
         except Exception as e:
             logging.warning(f"Erro ao remover {temp_existing_csv_path}: {e}")
 
-    # Buscar o arquivo existente no Google Drive
     logging.info(f"Procurando por arquivo existente: {file_name}...")
     query = f"name = '{file_name}' and '{folder_id}' in parents and trashed = false"
     results = (
@@ -100,7 +97,7 @@ def upload_to_drive(file_path, file_name):
 
     try:
         if items:
-            # Caso o arquivo exista
+
             file_id = items[0]["id"]
             logging.info(f"Arquivo encontrado. ID: {file_id}. Baixando...")
 
@@ -111,21 +108,19 @@ def upload_to_drive(file_path, file_name):
             while not done:
                 status, done = downloader.next_chunk()
 
-            existing_csv.seek(0)  # Move o ponteiro para o início do arquivo
+            existing_csv.seek(0)
 
             with open(temp_existing_csv_path, "wb") as f:
                 f.write(existing_csv.read())
 
             logging.info(f"Arquivo {temp_existing_csv_path} baixado com sucesso.")
 
-            # Mesclar os arquivos
             if os.path.exists(file_path):
                 logging.info("Arquivo local encontrado, iniciando processamento...")
                 merge_csv(file_path, temp_existing_csv_path)
             else:
                 logging.error(f"Arquivo {file_path} não encontrado ou indisponível.")
 
-            # Atualizar o arquivo no Google Drive
             logging.info(f"Atualizando o arquivo {file_name} no Google Drive...")
             media = MediaFileUpload(
                 temp_existing_csv_path, mimetype="application/vnd.ms-excel"
@@ -135,7 +130,7 @@ def upload_to_drive(file_path, file_name):
             )
             logging.info(f"Arquivo atualizado com sucesso. ID: {updated_file['id']}")
         else:
-            # Caso o arquivo não exista
+
             logging.info(f"Arquivo não encontrado. Criando novo arquivo: {file_name}")
             file_metadata = {"name": file_name, "parents": [folder_id]}
             media = MediaFileUpload(file_path, mimetype="application/vnd.ms-excel")
@@ -146,7 +141,7 @@ def upload_to_drive(file_path, file_name):
             )
             logging.info(f"Arquivo criado com sucesso. ID: {created_file['id']}")
     finally:
-        # Garantir que o arquivo temporário seja removido
+
         if os.path.exists(temp_existing_csv_path):
             try:
                 os.remove(temp_existing_csv_path)

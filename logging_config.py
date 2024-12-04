@@ -23,11 +23,9 @@ def setup_logging():
 
 def get_folder_path():
 
-    if system() == "Windows":
-
-        folder_path = os.path.join("C:", "intercom_data_fetcher", "files")
+    if os.name == "nt":
+        folder_path = os.path.join("C:\\", "intercom_data_fetcher", "files")
     else:
-
         folder_path = os.path.join(os.getenv("HOME"), "intercom_data_fetcher", "files")
 
     if not os.path.exists(folder_path):

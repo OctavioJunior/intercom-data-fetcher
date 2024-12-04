@@ -26,7 +26,6 @@ def enrich_contacts_with_client_data(conversations):
     for conversation in conversations:
         contacts = conversation.get("contacts", {}).get("contacts", [])
 
-        # Verifica se há pelo menos um contato
         if contacts:
             contact_id = contacts[0].get("id")
             if contact_id:

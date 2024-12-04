@@ -5,7 +5,7 @@ def csv_converter(conversations):
     expanded_conversations = []
 
     for conversation in conversations:
-        # Helper function to safely get values
+
         def safe_get(data, key, default=None):
             if isinstance(data, dict):
                 return data.get(key, default)
